@@ -1,0 +1,177 @@
+
+==============[Thirsty-Robot]===================
+
+==============[ NMAP-RESULTS ]==================
+
+Command: nmap -sS 192.168.0.*
+
+==============[   Result   ]====================
+
+Nmap scan report for 192.168.0.17
+Host is up (0.00039s latency).
+Not shown: 997 filtered ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+50000/tcp open  ibm-db2
+MAC Address: 08:00:27:28:63:20 (Oracle VirtualBox virtual NIC)
+
+================================================
+
+Command: nmap -A 192.168.0.17
+
+==============[   Result   ]====================
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-04-10 20:58 CDT
+Nmap scan report for 192.168.0.17
+Host is up (0.00081s latency).
+Not shown: 997 filtered ports
+PORT      STATE SERVICE  VERSION
+22/tcp    open  ssh      OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 d9:64:ce:0f:3a:ed:9b:1b:c6:e2:91:85:4e:84:8c:c8 (DSA)
+|_  2048 66:95:e5:42:59:d5:88:57:85:0b:c5:f4:08:0d:2b:0d (RSA)
+80/tcp    open  http     Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 1 disallowed entry 
+|_/staff
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: DC416
+50000/tcp open  ibm-db2?
+| fingerprint-strings: 
+|   GetRequest, ibm-db2-das: 
+|     NNNNNNNN NNNNNNNN SSSSSSSSSSSSSSS AAA
+|     N:::::::N N::::::N SS:::::::::::::::S N:::A
+|     S::::::::N E::::::NC:::::SUSRSI::::::S T:::::Y
+|     N:::::::::N N::::::NS:::::S SSSSSSS A:::::::A
+|     N::::::::::N N::::::NS:::::S A:::::::::A
+|     N:::::::::::N N::::::NS:::::S A:::::A:::::A
+|     T:::::::H::::N R::::::O U::::SSSS G:::::A H:::::A
+|     N::::::N N::::N N::::::N SS::::::SSSSS A:::::A A:::::A
+|     N::::::N N::::N:::::::N SSS::::::::SS A:::::A A:::::A
+|     N::::::N N:::::::::::N SSOBSC::::S A:::::AARAIAATY:::::A
+|     3::::::N 4::::::::::N 3:::::S 4:::::::::::::::::::::A
+|     N::::::N N:::::::::N S:::::S A:::::AAAAAAAAAAAAA:::::A
+|     3::::::N 4::::::::NS3SSSS4 S:::::S 0:::::d 0:::::a
+|_    N::::::N N:::::::NS::::::SUDPSS::::
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port50000-TCP:V=7.60%I=7%D=4/10%Time=5ACD6BD3%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,460,"\nNNNNNNNN\x20\x20\x20\x20\x20\x20\x20\x20NNNNNNNN\x20\x
+SF:20\x20SSSSSSSSSSSSSSS\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20AAA\nN:::::::N\x20\x20\x20\x20\x20\x20\x20N::::::N\x20SS:::::::::
+SF:::::::S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20N:::A\nS::::::::
+SF:N\x20\x20\x20\x20\x20\x20E::::::NC:::::SUSRSI::::::S\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20T:::::Y\nN:::::::::N\x20\x20\x20\x20\x20N:::::
+SF::NS:::::S\x20\x20\x20\x20\x20SSSSSSS\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20A:::::::A\nN::::::::::N\x20\x20\x20\x20N::::::NS:::::S\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0A:::::::::A\nN:::::::::::N\x20\x20\x20N::::::NS:::::S\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20A:::::A:
+SF:::::A\nT:::::::H::::N\x20\x20R::::::O\x20U::::SSSS\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20G:::::A\x20H:::::A\nN::::::N
+SF:\x20N::::N\x20N::::::N\x20\x20SS::::::SSSSS\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20A:::::A\x20\x20\x20A:::::A\nN::::::N\x20\x20N::::N:::::::N\
+SF:x20\x20\x20\x20SSS::::::::SS\x20\x20\x20\x20\x20\x20\x20A:::::A\x20\x20
+SF:\x20\x20\x20A:::::A\nN::::::N\x20\x20\x20N:::::::::::N\x20\x20\x20\x20\
+SF:x20\x20\x20SSOBSC::::S\x20\x20\x20\x20\x20A:::::AARAIAATY:::::A\n3:::::
+SF::N\x20\x20\x20\x204::::::::::N\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x203:::::S\x20\x20\x204:::::::::::::::::::::A\nN::::::N\x20\x20\x20
+SF:\x20\x20N:::::::::N\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20S:::
+SF:::S\x20\x20A:::::AAAAAAAAAAAAA:::::A\n3::::::N\x20\x20\x20\x20\x20\x204
+SF:::::::::NS3SSSS4\x20\x20\x20\x20\x20S:::::S\x200:::::d\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x200:::::a\nN::::::N\x20\x20\x20\x20\x2
+SF:0\x20\x20N:::::::NS::::::SUDPSS::::")%r(ibm-db2-das,450,"\nNNNNNNNN\x20
+SF:\x20\x20\x20\x20\x20\x20\x20NNNNNNNN\x20\x20\x20SSSSSSSSSSSSSSS\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20AAA\nN:::::::N\x20\x20\
+SF:x20\x20\x20\x20\x20N::::::N\x20SS:::::::::::::::S\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20N:::A\nS::::::::N\x20\x20\x20\x20\x20\x20E:::
+SF::::NC:::::SUSRSI::::::S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20T:::
+SF:::Y\nN:::::::::N\x20\x20\x20\x20\x20N::::::NS:::::S\x20\x20\x20\x20\x20
+SF:SSSSSSS\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20A:::::::A\nN::::::::::N\
+SF:x20\x20\x20\x20N::::::NS:::::S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20A:::::::::A\nN:::::::::::N\x
+SF:20\x20\x20N::::::NS:::::S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20A:::::A:::::A\nT:::::::H::::N\x20\x20
+SF:R::::::O\x20U::::SSSS\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20G:::::A\x20H:::::A\nN::::::N\x20N::::N\x20N::::::N\x20\x2
+SF:0SS::::::SSSSS\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20A:::::A\x20\x20\x
+SF:20A:::::A\nN::::::N\x20\x20N::::N:::::::N\x20\x20\x20\x20SSS::::::::SS\
+SF:x20\x20\x20\x20\x20\x20\x20A:::::A\x20\x20\x20\x20\x20A:::::A\nN::::::N
+SF:\x20\x20\x20N:::::::::::N\x20\x20\x20\x20\x20\x20\x20SSOBSC::::S\x20\x2
+SF:0\x20\x20\x20A:::::AARAIAATY:::::A\n3::::::N\x20\x20\x20\x204::::::::::
+SF:N\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x203:::::S\x20\x20\x204::
+SF::::::::::::::::::::A\nN::::::N\x20\x20\x20\x20\x20N:::::::::N\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20S:::::S\x20\x20A:::::AAAAAAAAAAAA
+SF:A:::::A\n3::::::N\x20\x20\x20\x20\x20\x204::::::::NS3SSSS4\x20\x20\x20\
+SF:x20\x20S:::::S\x200:::::d\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x200:::::a\nN::::::N\x20\x20\x20\x20\x20\x20\x20N:::::::NS::::::SUDP
+SF:SS::::");
+MAC Address: 08:00:27:28:63:20 (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10, Linux 2.6.32 - 3.13
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.81 ms 192.168.0.17
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.22 seconds
+
+================================================
+
+Command: nmap -p 1-1000 192.168.0.17
+
+==============[   Result   ]====================
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-04-10 20:59 CDT
+Nmap scan report for 192.168.0.17
+Host is up (0.0017s latency).
+Not shown: 998 filtered ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 08:00:27:28:63:20 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 5.23 seconds
+
+============[  Procedure   ]====================
+
+So, as you can see we have 2 open ports, well we actually have 3
+I didn' ping to 5000, but port 5000 is open too. As we all know port
+80 is a associated, most of the time to web mostly Apache. So I went
+there and find a javascript that had a basic code, it will be on the folder
+flags enounter as flag one. It will be easy to read and commented for all
+newbies out there. 
+
+==============[   Result   ]====================
+
+Checking the browser console we have our flag:
+
+ROT-13 Encrypted: synt1{z00ap4xr}
+ROT-13 Decrypted: flag1{m00nc4ke}
+
+================================================
+
+TODO: Ping on port 22 using netcat
+
+SO we need to start a server on netcat, to listen on port 22,
+remember port 22 is mostly associated with SMTP and TCP.
+We need to start a server and a client, our server will ping and
+our client will received the message from 192.168.0.17:22.
+
+=================[  NETCAT  ]====================
+
+=_=_=_=_=_=_=_=_=[  SERVER  ]=_=_=_=_=_=_=_=_=_=_
+
+Command: netcat -l 192.168.0.17 22
+
+=================================================
+
+=_=_=_=_=_=_=_=_=[  CLIENT  ]=_=_=_=_=_=_=_=_=_=_
+
+Command: netcat -l 22
